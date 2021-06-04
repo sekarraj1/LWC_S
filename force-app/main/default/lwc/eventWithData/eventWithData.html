@@ -1,0 +1,23 @@
+<template>
+    
+        <template if:true={contacts.data}>
+            <div class="contacts">
+                <div class="contact-list">
+                    <template for:each={contacts.data} for:item="contact">
+                    <c-contact-list-item key={contact.Id}
+                        contact={contact}
+                        onselect={handleSelect}>
+                    </c-contact-list-item>
+                    </template>
+                </div>
+                <div class="contact-details">
+                    <template if:true={selectedContact}>
+                        <p>{selectedContact.Name}</p>
+                        <p>{selectedContact.Email}</p>
+                        <p>{selectedContact.Phone}</p>
+                    </template>
+                </div>
+            </div>
+        </template>
+    
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <span class="slds-badge slds-badge_inverse badge">
+            Total Number of Records in Table - {totalRecords}
+        </span>
+    </div>
+    <div style="height: 300px;">
+        <lightning-datatable
+        key-field="empId"
+        data={dataRow}
+        columns={columns}
+        enable-infinite-loading="true"
+        onloadmore={loadMoreData}
+        load-more-offset="20">
+    </lightning-datatable>
+
+    </div>
+</template>
